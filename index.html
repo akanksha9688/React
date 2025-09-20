@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
     <title>Namaste React</title>
 </head>
 <body>
-    <h1>Tanu</h1> <!-- this is not change""because react is only working inside div id root its becoz anything i render is render inside the root element  """  -->
+    <!--<h1>Tanu</h1>  this is not change""because react is only working inside div id root its becoz anything i render is render inside the root element  """  --> 
 
 
     <!--thats why we called react as a library also becoz react can be apply to a small portion of a page itself -->
 
      
-    <div id="root">
-        <h1>tanu is here</h1> <!--when here already h1 is there then it will be replaced (not appended )by react h1-->
+    <div id="root" class="root"> <!--in html we write class but in react we write className-->
+
+        
+        <h1>Not Render </h1> <!--when here already h1 is there then it will be replaced (not appended )by react h1-->
     </div>
-    <h1> Akanksha </h1>
+    <!--<h1> Akanksha </h1>-->
     <!--does the order of the file matter?
     //if you change the order of react and react-dom and src then it will give error  that React is not defined
     // because react-dom depends on react
     // when they are imported the order of file is must be same -->
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!--<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>-->
+    <!--if we insatll the npm i react and npm i react-dom  then we on't need these two links that come from cdn -->
     
-    <script src="./App.js "></script><!--// because the code inside app. js is using react and react-dom-->
+    <script type ="module" src="./App.js"></script><!--// because the code inside app. js is using react and react-dom-->
+    <!--when we import react and react dom it shows error  that Browser scripts cannot have imports or exports becoz  it take app .js as a normal js ut its not a normal js its a module so we write script type ="module" src="./App.js" -->
 </body>
 </html>
